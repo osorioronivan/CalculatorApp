@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191919;
+    width: 100%;
+}
+
+.container {
+    width: 400px;
+    border-radius: 20px;
+    background-color: #191919;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.btn-container button {
+    border: 0;
+    height: 70px;
+    background-color: #191919;
+    color: white;
+    margin-bottom: 10px;
+    margin: 1%;
+    width: 23%;
+    font-size: 1.5em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, 
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.btn-container button:hover{
+    background-color: #333232;
+}
+#textContainer{
+    padding: 20px;
+    border: 2px solid #464646;
+    width: 90%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#input-El{
+    width: 90%;
+    color: white;
+    margin: 10px;
+    background-color: #191919;
+    text-align: right;
+    font-size: 2em;
+    border-radius: 20px;
+    padding-top: 80px auto 0px;
+}
+
+#btnAdd, #btnSubtract, #btnTimes, #btnDivide{
+    color: #E66565;
+    font-size: 1.5em;
+}
+
+#btnEqual{
+    color: #26F7D1;
+}
+#result-El{
+    width: 90%;
+    color: white;
+    margin: 0;
+    background-color: #191919;
+    text-align: right;
+    font-size: 2.5em;
+}
