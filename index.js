@@ -106,6 +106,7 @@ btnAdd.addEventListener("click", function () {
             inputNum += " + "
             txtInput.textContent += inputNum
             isEqualClicked = false
+            txtEqual.textContent = ""
         } else {
             checkEqual()
             txtInput.textContent += " + "
@@ -126,6 +127,7 @@ btnSubtract.addEventListener("click", function () {
             inputNum += " - "
             txtInput.textContent += inputNum
             isEqualClicked = false
+            txtEqual.textContent = ""
         } else {
             checkEqual()
             txtInput.textContent += " - "
@@ -146,6 +148,7 @@ btnTimes.addEventListener("click", function () {
             txtInput.textContent += inputNum + " x "
             inputNum += " * "
             isEqualClicked = false
+            txtEqual.textContent = ""
         } else {
             checkEqual()
             txtInput.textContent += " x "
@@ -166,7 +169,8 @@ btnDivide.addEventListener("click", function () {
             txtEqual.style.display = "none"
             txtInput.textContent += inputNum + " ÷ "
             inputNum += " / "
-            isEqualClicked = false
+            isEqualClicked = false 
+            txtEqual.textContent = ""
         } else {
             checkEqual()
             txtInput.textContent += " ÷ "
