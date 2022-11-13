@@ -169,7 +169,7 @@ btnDivide.addEventListener("click", function () {
             txtEqual.style.display = "none"
             txtInput.textContent += inputNum + " ÷ "
             inputNum += " / "
-            isEqualClicked = false 
+            isEqualClicked = false
             txtEqual.textContent = ""
         } else {
             checkEqual()
