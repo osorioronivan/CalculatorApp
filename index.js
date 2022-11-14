@@ -16,13 +16,17 @@ const btnDivide = document.getElementById("btnDivide")
 const btnTimes = document.getElementById("btnTimes")
 const btnClear = document.getElementById("btnClear")
 const btnEqual = document.getElementById("btnEqual")
+const btnToggle = document.getElementById("toggle")
+const sliderEl = document.getElementById("slider")
+let btnContainer = document.getElementById("btn-container")
+let Container = document.getElementById("container")
+let btnTxtContainer = document.getElementById("textContainer")
 txtEqual.textContent = ""
 let inputNum = ""
 let isEqualClicked = false
 const operator = ['+', '-', '÷', 'x']
 
 function checkEqual() {
-    txtInput.style.fontSize = "2em"
     if (isEqualClicked) {
         clearTextbox(txtInput)
         isEqualClicked = false
@@ -94,7 +98,7 @@ btnZero.addEventListener("click", function () {
 })
 
 btnAdd.addEventListener("click", function () {
-    txtInput.style.fontSize = "2em"
+ 
     let numItems = txtInput.textContent.length - 2
     let num = txtInput.textContent[numItems]
     if (txtInput.textContent != "" && !operator.includes(num)) {
@@ -115,7 +119,7 @@ btnAdd.addEventListener("click", function () {
     }
 })
 btnSubtract.addEventListener("click", function () {
-    txtInput.style.fontSize = "2em"
+   
     let numItems = txtInput.textContent.length - 2
     let num = txtInput.textContent[numItems]
     if (txtInput.textContent != "" && !operator.includes(num)) {
@@ -136,7 +140,7 @@ btnSubtract.addEventListener("click", function () {
     }
 })
 btnTimes.addEventListener("click", function () {
-    txtInput.style.fontSize = "2em"
+    
     let numItems = txtInput.textContent.length - 2
     let num = txtInput.textContent[numItems]
     if (txtInput.textContent != "" && !operator.includes(num)) {
@@ -158,7 +162,6 @@ btnTimes.addEventListener("click", function () {
 })
 
 btnDivide.addEventListener("click", function () {
-    txtInput.style.fontSize = "2em"
     let numItems = txtInput.textContent.length - 2
     let num = txtInput.textContent[numItems]
     if (txtInput.textContent != "" && !operator.includes(num)) {
@@ -185,7 +188,6 @@ btnClear.addEventListener("click", function () {
 
 btnEqual.addEventListener("click", function () {
     txtEqual.style.display = "Block"
-    txtInput.style.fontSize = "1em"
     txtEqual.textContent = eval(inputNum)
     isEqualClicked = true
 })
@@ -196,3 +198,39 @@ function clearTextbox() {
     txtEqual.style.display = "none"
     inputNum = ""
 }
+
+btnToggle.addEventListener("click", function(){
+    if (sliderEl.style.cssFloat === "right"){
+        sliderEl.style.cssFloat = "left"
+        darkmode()
+    }else{
+        sliderEl.style.cssFloat = "right"
+        lightmode()
+    }
+})
+
+function lightmode(){
+    for (i = 0; i<btnContainer.children.length; i++){
+        btnContainer.children[i].classList.add('Light-btn-bg') 
+    }
+    btnContainer.style.backgroundColor = "#F9F9F9"
+    txtInput.classList.add("Light")
+   txtEqual.classList.add("Light")
+   btnTxtContainer.classList.add("Light")
+   Container.classList.add("Light") 
+
+   // btnContainer.classList.add('.Light-btn-bg') 
+}
+function  darkmode(){
+    let btnContainer = document.getElementById("btn-container")
+    for (i = 0; i<btnContainer.children.length; i++){
+        btnContainer.children[i].classList.remove('Light-btn-bg') 
+    }
+    btnContainer.style.backgroundColor = "#292D36"
+    txtInput.classList.remove("Light")
+    txtEqual.classList.remove("Light")
+    btnTxtContainer.classList.remove("Light")
+    Container.classList.remove("Light") 
+   
+}
+
