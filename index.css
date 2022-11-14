@@ -8,76 +8,126 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #191919;
+    background-color: #E8E8E8;
     width: 100%;
 }
-
-.container {
-    width: 400px;
-    border-radius: 20px;
+Body *{
+    transition: .5s ease-in;
     background-color: #191919;
+    color: #FAFAFA;
+}
+.container {
+    width: 500px;
+    border-radius: 40px;
     display: flex;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+.Light {
+    transition: .5s;
+    Color: #292D36;
+    background-color: #ffffff;
+}
+
+.Light-btn-bg{
+    transition: .5s;
+    background-color: #F7F7F7;
+    color: #292D36;
+}
+.Light-bg{
+    transition: .5s;
+   background-color:  #F9F9F9;
+   color: #292D36;
+}
+.Light-btn-bg:hover{
+    background-color:  #e0e0e0;
+ }
+
 .btn-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background-color: #292D36;
+    border-radius: 40px;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 30px 20px 20px 20px;
 }
 
 .btn-container button {
     border: 0;
-    height: 70px;
-    background-color: #191919;
-    color: white;
+    height: 100px;
     margin-bottom: 10px;
     margin: 1%;
     width: 23%;
+    font-weight: 800;
     font-size: 1.5em;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, 
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 7px,
+        rgba(0, 0, 0, 0.22) 0px 3px 3px;
 }
-.btn-container button:hover{
+
+div button:hover {
     background-color: #333232;
 }
-#textContainer{
+
+.textContainer {
     padding: 20px;
-    border: 2px solid #464646;
-    width: 90%;
-    height: 120px;
+    width: 100%;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
 }
-#input-El{
+
+#input-El {
+    max-height: 180px;
     width: 90%;
-    color: white;
     margin: 10px;
-    background-color: #191919;
     text-align: right;
-    font-size: 2em;
+    font-size: 2.5rem;
     border-radius: 20px;
     padding-top: 80px auto 0px;
 }
 
-#btnAdd, #btnSubtract, #btnTimes, #btnDivide{
+#btnAdd,
+#btnSubtract,
+#btnTimes,
+#btnDivide {
     color: #E66565;
-    font-size: 1.5em;
 }
 
-#btnEqual{
+#btnEqual {
     color: #26F7D1;
 }
-#result-El{
+
+#result-El {
     width: 90%;
-    color: white;
     margin: 0;
-    background-color: #191919;
     text-align: right;
-    font-size: 2.5em;
+    font-size: 5em;
+}
+
+.toggle {
+    background-color: #292D36;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 2px;
+}
+.round {
+    height: 35px;
+    width: 35px;
+    border-radius: 15px;
+    float: left;
+    position: relative;
+}
+
+.round svg{
+    background-color: #292D36;
+    border-radius: 15px;
 }
